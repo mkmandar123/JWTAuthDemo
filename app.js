@@ -6,6 +6,10 @@ const bodyParser=require("body-parser")
 app.use(bodyParser.json())
 
 
+app.get("/",(req,res)=>{
+	res.send("HOME")
+})
+
 app.post("/login",(req,res)=>{
     const{username,password}=req.body
     if(username=='admin'&&password=='admin'){
