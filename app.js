@@ -33,6 +33,6 @@ app.post("/restricted",(req,res)=>{
 })
 
 
-app.listen(3000,()=>{
+app.listen(process.env.PORT,()=>{
     console.log("The server has been started")
 })
