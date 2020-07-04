@@ -19,7 +19,7 @@ app.post("/login",(req,res)=>{
 		//validating user
     if(username=='admin'&&password=='admin'){
 
-				//generating a JWT
+				//generating a JWT with expiry time of 30sec 
         const token=jwt.sign({username},"secretKey",{expiresIn:30})
         res.send(token)
     }
